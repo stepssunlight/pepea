@@ -1,0 +1,73 @@
+let balance = 100
+let bet = 0
+let multiplier = 1
+let crashPoint
+
+function placeBet(){
+
+bet = Number(document.getElementById("bet").value)
+
+if(bet <= balance){
+
+balance -= bet
+updateBalance()
+
+startGame()
+
+}
+
+}
+
+function startGame(){
+
+multiplier = 1
+crashPoint = Math.random()*5 + 1
+
+let interval = setInterval(()=>{
+
+multiplier += 0.05
+
+document.getElementById("multiplier")
+.innerText = multiplier.toFixed(2)+"x"
+
+if(multiplier >= crashPoint){
+
+clearInterval(interval)
+
+alert("Crash! You lost.")
+
+reset()
+
+}
+
+},100)
+
+}
+
+function cashOut(){
+
+let win = bet * multiplier
+
+balance += win
+
+updateBalance()
+
+reset()
+
+}
+
+function updateBalance(){
+
+document.getElementById("balance")
+.innerText = balance.toFixed(2)
+
+}
+
+function reset(){
+
+multiplier = 1
+
+document.getElementById("multiplier")
+.innerText = "1.00x"
+
+}
