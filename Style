@@ -1,0 +1,16 @@
+body{
+font-family: Arial;
+text-align:center;
+background:#0d1117;
+color:white;
+}
+
+h1{
+color:#00ffa2;
+}
+
+button{
+padding:10px 20px;
+margin:5px;
+font-size:16px;
+}
