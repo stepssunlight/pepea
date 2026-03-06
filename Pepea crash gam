@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pepea Crash Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🛫 Pepea Crash Game</h1>
+
+<h2 id="multiplier">1.00x</h2>
+
+Balance: <span id="balance">100</span>
+
+<br><br>
+
+<input id="bet" type="number" placeholder="Bet amount">
+
+<button onclick="placeBet()">BET</button>
+<button onclick="cashOut()">CASH OUT</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
